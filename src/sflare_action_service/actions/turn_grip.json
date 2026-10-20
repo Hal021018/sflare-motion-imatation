@@ -1,0 +1,230 @@
+{
+  "schema_version": "1.0.0",
+  "name": "turn_grip",
+  "scope": "right",
+  "units": "deg",
+  "control": {
+    "period": 0.02,
+    "speed_scale": 1.0
+  },
+  "exit": {
+    "auto_return_zero": false
+  },
+  "keyframes": [
+    {
+      "time": 0.0,
+      "right": [
+        153.0,
+        29.7,
+        0.3,
+        7.6,
+        0.0,
+        4.2,
+        0.6
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 1.0,
+      "right": [
+        104,
+        20,
+        -7,
+        73,
+        -77,
+        0,
+        0
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 2.0,
+      "right": [
+        104,
+        20,
+        21,
+        73,
+        -77,
+        0,
+        0
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 3.0,
+      "right": [
+        104,
+        20,
+        -43,
+        73,
+        -77,
+        0,
+        0
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 4.0,
+      "right": [
+        104,
+        20,
+        21,
+        73,
+        -77,
+        0,
+        0
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 5.0,
+      "right": [
+        104,
+        20,
+        -43,
+        73,
+        -77,
+        0,
+        0
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 6.0,
+      "right": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "type": "stop"
+    }
+  ],
+  "events": [],
+  "program": [
+    {
+      "op": "mode",
+      "value": "remote_control"
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "yaw_start",
+      "timeout": 30
+    },
+    {
+      "op": "hand",
+      "action": "safe_fist"
+    },
+    {
+      "op": "wait",
+      "seconds": 0.5
+    },
+    {
+      "op": "move",
+      "frame": 0,
+      "duration": 1.8,
+      "settle": true
+    },
+    {
+      "op": "yaw_target",
+      "degrees": 360
+    },
+    {
+      "op": "loop_until",
+      "max_iterations": 100,
+      "cycles": [
+        [
+          {
+            "op": "move",
+            "frame": 1,
+            "duration": 1.8,
+            "settle": true
+          },
+          {
+            "op": "wait",
+            "seconds": 0.3
+          }
+        ],
+        [
+          {
+            "op": "move",
+            "frame": 2,
+            "duration": 1.8,
+            "settle": true
+          },
+          {
+            "op": "wait",
+            "seconds": 0.3
+          }
+        ],
+        [
+          {
+            "op": "move",
+            "frame": 3,
+            "duration": 1.8,
+            "settle": true
+          },
+          {
+            "op": "wait",
+            "seconds": 0.3
+          }
+        ],
+        [
+          {
+            "op": "move",
+            "frame": 4,
+            "duration": 1.8,
+            "settle": true
+          },
+          {
+            "op": "wait",
+            "seconds": 0.3
+          }
+        ],
+        [
+          {
+            "op": "move",
+            "frame": 5,
+            "duration": 1.8,
+            "settle": true
+          },
+          {
+            "op": "wait",
+            "seconds": 0.3
+          }
+        ],
+        [
+          {
+            "op": "move",
+            "frame": 0,
+            "duration": 1.8,
+            "settle": true
+          },
+          {
+            "op": "wait",
+            "seconds": 0.3
+          }
+        ]
+      ]
+    },
+    {
+      "op": "hand",
+      "action": "open"
+    },
+    {
+      "op": "move",
+      "frame": 6,
+      "duration": 4.8,
+      "settle": true
+    },
+    {
+      "op": "yaw_stop"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0.0",
+  "name": "handover",
+  "scope": "right",
+  "units": "deg",
+  "control": {
+    "period": 0.02,
+    "speed_scale": 1.0
+  },
+  "exit": {
+    "auto_return_zero": false
+  },
+  "keyframes": [
+    {
+      "time": 0.0,
+      "right": [
+        33.288,
+        -0.085,
+        0.263,
+        47.481,
+        84.0,
+        0,
+        0
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 1.0,
+      "right": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "type": "stop"
+    }
+  ],
+  "events": [],
+  "program": [
+    {
+      "op": "move",
+      "frame": 0,
+      "duration": 1.8,
+      "settle": true
+    },
+    {
+      "op": "hand",
+      "action": "open"
+    },
+    {
+      "op": "wait",
+      "seconds": 5.0,
+      "phase": "still"
+    },
+    {
+      "op": "move",
+      "frame": 1,
+      "duration": 4.8,
+      "settle": true
+    }
+  ]
+}

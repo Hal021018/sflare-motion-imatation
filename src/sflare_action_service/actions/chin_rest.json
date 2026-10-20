@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0.0",
+  "name": "chin_rest",
+  "scope": "right",
+  "units": "deg",
+  "control": {
+    "period": 0.02,
+    "speed_scale": 1.0
+  },
+  "exit": {
+    "auto_return_zero": false
+  },
+  "keyframes": [
+    {
+      "time": 0.0,
+      "right": [
+        54.008,
+        17.011,
+        -14.1,
+        119.0,
+        12.958,
+        0,
+        0
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 1.0,
+      "right": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "type": "stop"
+    }
+  ],
+  "events": [],
+  "program": [
+    {
+      "op": "hand",
+      "action": "open"
+    },
+    {
+      "op": "wait",
+      "seconds": 0.5
+    },
+    {
+      "op": "move",
+      "frame": 0,
+      "duration": 1.8,
+      "settle": true
+    },
+    {
+      "op": "hand",
+      "action": "chin_rest"
+    },
+    {
+      "op": "wait",
+      "seconds": 3.0
+    },
+    {
+      "op": "hand",
+      "action": "open"
+    },
+    {
+      "op": "move",
+      "frame": 1,
+      "duration": 4.8,
+      "settle": true
+    }
+  ]
+}

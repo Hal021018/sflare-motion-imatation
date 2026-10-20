@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "name": "stretch_ready",
+  "scope": "dual",
+  "units": "deg",
+  "control": {
+    "period": 0.040,
+    "speed_scale": 1.0
+  },
+  "exit": {
+    "auto_return_zero": false
+  },
+  "keyframes": [
+    {
+      "time": 0.0,
+      "left": [60.0, 16.0, -30.0, 89.0, 63.0, 0.0, 0.0],
+      "right": [60.0, 14.0, -30.0, 93.0, 63.0, 0.0, 0.0],
+      "type": "stop",
+      "hold": 0.0
+    }
+  ],
+  "events": [
+    {
+      "time": 0.0,
+      "target": "dual_hand",
+      "action": "hold_stretch_grip"
+    }
+  ]
+}

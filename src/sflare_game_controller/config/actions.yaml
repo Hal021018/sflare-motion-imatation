@@ -1,0 +1,82 @@
+# 游戏候选动作池
+#
+# 标准姿态来源：动作服务 actions/<name>.json 的 keyframes[0].right[0:7]
+# 已核对：下列 6 个动作的"最后一个非零关键帧"均等于 keyframes[0]，
+# 即玩家看到的最终展示姿势就是这里的 standard_deg。
+#
+# 本仓库配套的动作服务副本（src/sflare_action_service）已把这 6 个动作的
+# 展示停留统一改为 hold_sec=5.0，因此 estimated_duration_sec 也相应加长。
+
+scoring_defaults: &scoring_defaults
+  position_share: 0.70
+  position_tolerance_mm: 50.0
+  position_zero_mm: 300.0
+  joint_tolerance_deg: 5.0
+
+# 初始工程权重，尚未经过人体感知/临床标定；按动作可独立调整。
+actions:
+  diagonal_point:
+    scoring:
+      <<: *scoring_defaults
+      joint_weights: [35, 25, 15, 15, 6, 2, 2]
+    display_name: 指向
+    command: diagonal_point
+    standard_deg: [92.804, 24.738, 0.263, 2.116, -61.737, 0.0, 0.0]
+    hold_sec: 5.0
+    estimated_duration_sec: 13.6
+    hand_sequence: [open, point, open]
+
+  handshake:
+    scoring:
+      <<: *scoring_defaults
+      joint_weights: [30, 15, 10, 30, 9, 3, 3]
+    display_name: 握手
+    command: handshake
+    standard_deg: [76.0, 0.0, 0.0, 21.0, 0.0, 0.0, 0.0]
+    hold_sec: 5.0
+    estimated_duration_sec: 13.1
+    hand_sequence: [open]
+
+  handover:
+    scoring:
+      <<: *scoring_defaults
+      joint_weights: [25, 15, 10, 30, 14, 3, 3]
+    display_name: 前伸递物
+    command: handover
+    standard_deg: [33.288, -0.085, 0.263, 47.481, 84.0, 0.0, 0.0]
+    hold_sec: 5.0
+    estimated_duration_sec: 12.1
+    hand_sequence: [open]
+
+  like:
+    scoring:
+      <<: *scoring_defaults
+      joint_weights: [45, 20, 10, 15, 6, 2, 2]
+    display_name: 点赞
+    command: like
+    standard_deg: [103.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    hold_sec: 5.0
+    estimated_duration_sec: 12.1
+    hand_sequence: [like, open]
+
+  raise_head:
+    scoring:
+      <<: *scoring_defaults
+      joint_weights: [45, 25, 10, 10, 6, 2, 2]
+    display_name: 举手过头
+    command: raise_head
+    standard_deg: [167.707, 4.339, 0.263, 2.12, -2.257, 0.0, 0.0]
+    hold_sec: 5.0
+    estimated_duration_sec: 12.6
+    hand_sequence: [open, open]
+
+  doubt:
+    scoring:
+      <<: *scoring_defaults
+      joint_weights: [25, 20, 10, 25, 14, 3, 3]
+    display_name: 疑问
+    command: doubt
+    standard_deg: [65.0, 35.0, -11.0, 116.0, 84.0, 0.0, 0.0]
+    hold_sec: 5.0
+    estimated_duration_sec: 19.8
+    hand_sequence: [point, open]

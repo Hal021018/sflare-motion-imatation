@@ -1,0 +1,26 @@
+HARDWARE {"sdk": "PallasSDK_V2.0.5355; PythonSDK_V2.0.0", "status": [0, 0, 0, 0, 0, 1], "power": [0, 1, 0, 0, 0], "joints": [0.006, 0.0, 0.0, 0.003, 0.0, 0.022, 0.022], "errors": []}
+BEGIN handshake
+EVENT 86416.275 {"type": "arm_demo", "data": {"state": "start"}}
+EVENT 86419.008 {"type": "arm_power", "data": {"state": "on"}}
+EVENT 86419.141 {"type": "arm_demo", "data": {"state": "moving"}}
+EVENT 86428.607 {"type": "arm_demo", "data": {"state": "still"}}
+EVENT 86434.313 {"type": "arm_demo", "data": {"state": "reset"}}
+EVENT 86442.763 {"type": "arm_power", "data": {"state": "off"}}
+EVENT 86442.813 {"type": "arm_demo", "data": {"state": "end"}}
+HARDWARE {"sdk": "PallasSDK_V2.0.5355; PythonSDK_V2.0.0", "status": [0, 0, 0, 0, 0, 1], "power": [0, 1, 0, 0, 0], "joints": [0.009, 0.0, 0.0, 0.007, 0.0, 0.044, 0.022], "errors": []}
+PASS {"action": "handshake", "elapsed_sec": 26.861, "phases": ["start", "moving", "still", "reset", "end"], "power_events": ["on", "off"], "hardware_after": {"sdk": "PallasSDK_V2.0.5355; PythonSDK_V2.0.0", "status": [0, 0, 0, 0, 0, 1], "power": [0, 1, 0, 0, 0], "joints": [0.009, 0.0, 0.0, 0.007, 0.0, 0.044, 0.022], "errors": []}}
+BEGIN handover
+EVENT 86444.214 {"type": "arm_demo", "data": {"state": "start"}}
+EVENT 86446.996 {"type": "arm_power", "data": {"state": "on"}}
+EVENT 86447.122 {"type": "arm_demo", "data": {"state": "moving"}}
+EVENT 86453.002 {"type": "arm_demo", "data": {"state": "still"}}
+EVENT 86458.136 {"type": "arm_demo", "data": {"state": "reset"}}
+EVENT 86458.631 {"type": "error", "data": {"cmd": "arm_demo", "code": "EMERGENCY_STOP", "msg": "handover 执行失败：服务状态 physical_alarm"}}
+EVENT 86458.951 {"type": "arm_power", "data": {"state": "off"}}
+STOP_SENT; PARTIAL_SUMMARY [{"action": "handshake", "elapsed_sec": 26.861, "phases": ["start", "moving", "still", "reset", "end"], "power_events": ["on", "off"], "hardware_after": {"sdk": "PallasSDK_V2.0.5355; PythonSDK_V2.0.0", "status": [0, 0, 0, 0, 0, 1], "power": [0, 1, 0, 0, 0], "joints": [0.009, 0.0, 0.0, 0.007, 0.0, 0.044, 0.022], "errors": []}}]
+Traceback (most recent call last):
+  File "/tmp/test_real_topic_actions.py", line 105, in <module>
+    main()
+  File "/tmp/test_real_topic_actions.py", line 71, in main
+    raise RuntimeError('Physical emergency stop')
+RuntimeError: Physical emergency stop

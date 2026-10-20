@@ -1,0 +1,26 @@
+sflare_game_node:
+  ros__parameters:
+    # 自动测试默认使用假SDK；真实部署必须人工改为false并确认旧控制节点已停止。
+    use_fake_sdk: true
+    controller_ip: "192.168.3.100"
+    # 待上位定位话题确定后填写，例如 /odom 与 nav_msgs/msg/Odometry。
+    monitored_topic: ""
+    monitored_topic_type: ""
+    monitored_topic_timeout_sec: 1.0
+    state_publish_hz: 5.0
+    # 固定动作服务：游戏不再直接驱动机械臂，只发命令并订阅状态。
+    action_topic: "/dual_arm_xcdl_action"
+    action_status_topic: "/dual_arm_xcdl_action_status"
+    # 空字符串表示使用安装目录下的 config/actions.yaml
+    action_config: ""
+    # 发出动作后等待状态离开 ready 的上限
+    start_timeout_sec: 5.0
+    # 动作执行超时 = 动作表 estimated_duration_sec + 该余量
+    timeout_margin_sec: 10.0
+    # 按需脱限的最长等待（服务单轴 20s，7 轴留足余量）
+    recover_timeout_sec: 90.0
+    # 自检发现超限时是否自动调用 recover_limit
+    auto_recover_limit: true
+    # 评分：七轴角度取自只读自检（SDK）。
+    # 本机 /arm_joint_states 是 fish_driver 发布的占位全零，不能作为评分输入。
+    scoring_arm: "right"

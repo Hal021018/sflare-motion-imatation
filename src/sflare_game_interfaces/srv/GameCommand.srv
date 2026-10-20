@@ -1,0 +1,5 @@
+# 请求类型：self_check、release_limit、moveaction、calculate_score 或 stop。
+string request_type
+---
+# 固定结构 JSON，包含 success、request_type、code、message 和 data。
+string result

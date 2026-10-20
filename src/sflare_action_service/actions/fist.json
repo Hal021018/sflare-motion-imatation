@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "name": "fist",
+  "scope": "dual",
+  "units": "deg",
+  "control": {
+    "period": 0.040,
+    "speed_scale": 1.0
+  },
+  "exit": {
+    "auto_return_zero": true
+  },
+  "keyframes": [
+    {
+      "time": 0.0,
+      "left": [90.0, 16.0, -35.0, 93.0, 10.0, 0.0, 0.0],
+      "right": [78.0, 14.0, -31.0, 91.0, 2.0, -1.0, -1.0],
+      "type": "stop",
+      "hold": 0.01
+    },
+    {
+      "time": 1.5,
+      "left": [87.0, 13.0, -43.0, 94.5, 18.0, 8.0, 0.0],
+      "right": [81.0, 7.0, -39.0, 91.0, 2.0, -1.0, -1.0],
+      "type": "stop",
+      "hold": 1.0
+    }
+  ],
+  "events": [
+    {
+      "time": 0.0,
+      "target": "right_hand",
+      "action": "safe_fist"
+    }
+  ]
+}

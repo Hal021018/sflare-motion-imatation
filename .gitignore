@@ -2,3 +2,27 @@ data/
 __pycache__/
 *.pyc
 .venv/
+# 第三方交付快照（含 aarch64 构建产物），不入库
+reference/
+.hermes/
+
+# 厂商二进制不入库
+*.so
+
+# 备份/交付压缩包
+*.tar.gz
+*.zip
+
+# 测试与构建缓存
+.pytest_cache/
+.mypy_cache/
+build/
+install/
+log/
+
+# 运行产物
+traces/
+logs/
+
+# 诊断原始数据（保留脚本与结论文档）
+src/sflare_action_service/diagnostics/*.csv

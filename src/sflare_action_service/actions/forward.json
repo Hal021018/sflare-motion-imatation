@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0.0",
+  "name": "forward",
+  "scope": "right",
+  "units": "deg",
+  "control": {
+    "period": 0.02,
+    "speed_scale": 1.0
+  },
+  "exit": {
+    "auto_return_zero": false
+  },
+  "keyframes": [
+    {
+      "time": 0.0,
+      "right": [
+        123.0,
+        26.0,
+        -32.2,
+        38.0,
+        -40.1,
+        0.2,
+        0.2
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 1.0,
+      "right": [
+        123.0,
+        5.3,
+        -32.6,
+        55.4,
+        -40.1,
+        0.2,
+        0.2
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 2.0,
+      "right": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "type": "stop"
+    }
+  ],
+  "events": [],
+  "program": [
+    {
+      "op": "mode",
+      "value": "remote_control"
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "hand",
+      "action": "open"
+    },
+    {
+      "op": "linear_start",
+      "speed": 0.2,
+      "distance": 0.3
+    },
+    {
+      "op": "move",
+      "frame": 0,
+      "duration": 1.8,
+      "settle": true
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "move",
+      "frame": 1,
+      "duration": 1.8,
+      "settle": true
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "move",
+      "frame": 0,
+      "duration": 1.8,
+      "settle": true
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "move",
+      "frame": 1,
+      "duration": 1.8,
+      "settle": true
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "move",
+      "frame": 0,
+      "duration": 1.8,
+      "settle": true
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "move",
+      "frame": 1,
+      "duration": 1.8,
+      "settle": true
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "hand",
+      "action": "open"
+    },
+    {
+      "op": "move",
+      "frame": 2,
+      "duration": 4.8,
+      "settle": true
+    },
+    {
+      "op": "linear_stop"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "name": "wave",
+  "scope": "right",
+  "units": "deg",
+  "control": {"period": 0.020, "speed_scale": 1.0},
+  "exit": {"auto_return_zero": false},
+  "keyframes": [
+    {"time": 0.0, "right": [104, 20, -7, 73, -77, 0, 0], "type": "stop"},
+    {"time": 1.2, "right": [104, 20, 21, 73, -77, 0, 0], "type": "pass"},
+    {"time": 3.0, "right": [104, 20, -43, 73, -77, 0, 0], "type": "pass"},
+    {"time": 4.8, "right": [104, 20, 21, 73, -77, 0, 0], "type": "pass"},
+    {"time": 6.6, "right": [104, 20, -43, 73, -77, 0, 0], "type": "pass"},
+    {"time": 11.4, "right": [0, 0, 0, 0, 0, 0, 0], "type": "stop"}
+  ],
+  "events": [{"time": 0.0, "target": "right_hand", "action": "open"}]
+}

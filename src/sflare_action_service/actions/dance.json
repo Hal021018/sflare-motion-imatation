@@ -1,0 +1,551 @@
+{
+  "schema_version": "1.0.0",
+  "name": "dance",
+  "scope": "right",
+  "units": "deg",
+  "control": {
+    "period": 0.02,
+    "speed_scale": 1.0
+  },
+  "exit": {
+    "auto_return_zero": false
+  },
+  "keyframes": [
+    {
+      "time": 0.0,
+      "right": [
+        18.0,
+        1.1,
+        2.8,
+        1.5,
+        -1.1,
+        -19.0,
+        17.0
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 1.0,
+      "right": [
+        18.0,
+        15.6,
+        2.8,
+        1.3,
+        -1.0,
+        -19.0,
+        18.0
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 2.0,
+      "right": [
+        18.0,
+        1.1,
+        2.8,
+        1.5,
+        -1.1,
+        -19.0,
+        17.0
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 3.0,
+      "right": [
+        18.0,
+        15.6,
+        2.8,
+        1.3,
+        -1.0,
+        -19.0,
+        18.0
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 4.0,
+      "right": [
+        18.0,
+        1.1,
+        2.8,
+        1.5,
+        -1.1,
+        -19.0,
+        17.0
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 5.0,
+      "right": [
+        18.0,
+        15.6,
+        2.8,
+        1.3,
+        -1.0,
+        -19.0,
+        18.0
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 6.0,
+      "right": [
+        80.0,
+        1.1,
+        3.2,
+        72.2,
+        20.0,
+        4.2,
+        0.6
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 7.0,
+      "right": [
+        80.0,
+        -0.5,
+        -27.8,
+        73.1,
+        -9.8,
+        4.2,
+        0.6
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 8.0,
+      "right": [
+        80.0,
+        1.1,
+        3.2,
+        72.2,
+        20.0,
+        4.2,
+        0.6
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 9.0,
+      "right": [
+        80.0,
+        -0.5,
+        -27.8,
+        73.1,
+        -9.8,
+        4.2,
+        0.6
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 10.0,
+      "right": [
+        80.0,
+        1.1,
+        3.2,
+        72.2,
+        20.0,
+        4.2,
+        0.6
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 11.0,
+      "right": [
+        80.0,
+        -0.5,
+        -27.8,
+        73.1,
+        -9.8,
+        4.2,
+        0.6
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 12.0,
+      "right": [
+        123.0,
+        26.0,
+        -32.2,
+        38.0,
+        -40.1,
+        0.2,
+        0.2
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 13.0,
+      "right": [
+        123.0,
+        5.3,
+        -32.6,
+        55.4,
+        -40.1,
+        0.2,
+        0.2
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 14.0,
+      "right": [
+        153.0,
+        29.7,
+        0.3,
+        7.6,
+        0.0,
+        4.2,
+        0.6
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 15.0,
+      "right": [
+        12.5,
+        19.7,
+        0.3,
+        13.0,
+        -9.8,
+        4.2,
+        0.6
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 16.0,
+      "right": [
+        80.0,
+        -0.5,
+        -27.8,
+        73.1,
+        -9.8,
+        4.2,
+        0.6
+      ],
+      "type": "stop"
+    },
+    {
+      "time": 17.0,
+      "right": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "type": "stop"
+    }
+  ],
+  "events": [],
+  "program": [
+    {
+      "op": "mode",
+      "value": "remote_control"
+    },
+    {
+      "op": "wait",
+      "seconds": 0.5
+    },
+    {
+      "op": "yaw_start"
+    },
+    {
+      "op": "yaw_target",
+      "degrees": 20
+    },
+    {
+      "op": "move",
+      "frame": 0,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "yaw_target",
+      "degrees": -20
+    },
+    {
+      "op": "move",
+      "frame": 1,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "yaw_target",
+      "degrees": 20
+    },
+    {
+      "op": "move",
+      "frame": 2,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "yaw_target",
+      "degrees": -20
+    },
+    {
+      "op": "move",
+      "frame": 3,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "yaw_target",
+      "degrees": 20
+    },
+    {
+      "op": "move",
+      "frame": 4,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "yaw_target",
+      "degrees": -20
+    },
+    {
+      "op": "move",
+      "frame": 5,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "hand",
+      "action": "half_heart"
+    },
+    {
+      "op": "yaw_target",
+      "degrees": -20
+    },
+    {
+      "op": "move",
+      "frame": 6,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "yaw_target",
+      "degrees": 20
+    },
+    {
+      "op": "move",
+      "frame": 7,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "yaw_target",
+      "degrees": -20
+    },
+    {
+      "op": "move",
+      "frame": 8,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "yaw_target",
+      "degrees": 20
+    },
+    {
+      "op": "move",
+      "frame": 9,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "yaw_target",
+      "degrees": -20
+    },
+    {
+      "op": "move",
+      "frame": 10,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "yaw_target",
+      "degrees": 20
+    },
+    {
+      "op": "move",
+      "frame": 11,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.3
+    },
+    {
+      "op": "hand",
+      "action": "open"
+    },
+    {
+      "op": "yaw_target",
+      "degrees": 360,
+      "reference": "current",
+      "timeout": 18,
+      "max_speed": 0.6,
+      "travel_degrees": 540
+    },
+    {
+      "op": "loop_until",
+      "max_iterations": 34,
+      "cycles": [
+        [
+          {
+            "op": "move",
+            "frame": 12,
+            "duration": 1.8,
+            "settle": false
+          },
+          {
+            "op": "wait",
+            "seconds": 0.3
+          }
+        ],
+        [
+          {
+            "op": "move",
+            "frame": 13,
+            "duration": 1.8,
+            "settle": false
+          },
+          {
+            "op": "wait",
+            "seconds": 0.3
+          }
+        ]
+      ]
+    },
+    {
+      "op": "yaw_final",
+      "degrees": 360,
+      "guard_degrees": 90,
+      "timeout": 8,
+      "max_speed": 0.4
+    },
+    {
+      "op": "move",
+      "frame": 14,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.08
+    },
+    {
+      "op": "move",
+      "frame": 15,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "wait",
+      "seconds": 0.08
+    },
+    {
+      "op": "move",
+      "frame": 16,
+      "duration": 1.8,
+      "settle": false
+    },
+    {
+      "op": "settle",
+      "seconds": 10
+    },
+    {
+      "op": "hand",
+      "action": "half_heart"
+    },
+    {
+      "op": "loop_until",
+      "max_iterations": 50,
+      "cycles": [
+        [
+          {
+            "op": "wait",
+            "seconds": 0.1
+          }
+        ]
+      ]
+    },
+    {
+      "op": "wait",
+      "seconds": 2
+    },
+    {
+      "op": "hand",
+      "action": "open"
+    },
+    {
+      "op": "move",
+      "frame": 17,
+      "duration": 4.8,
+      "settle": true
+    },
+    {
+      "op": "wait",
+      "seconds": 0.08
+    },
+    {
+      "op": "yaw_stop"
+    }
+  ]
+}
